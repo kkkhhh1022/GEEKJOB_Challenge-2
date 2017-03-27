@@ -1,0 +1,5 @@
+スペック
+CPU:2.2 GHz Intel Core i7
+メモリ:8 GB 1600 MHz DDR3
+ストレージ:256 GB SSD
+OS:OS X El Capitan
