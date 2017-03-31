@@ -1,0 +1,19 @@
+SQL文
+
+create table user(userID int NOT NULL PRIMARY KEY,name varchar(255),tell varchar(255),age int,birthday date,departmentID int,stationID int);
+
+insert into user values(1,'田中 実','012-345-6789',30,'1994-02-01',3,1),(2,'鈴木 茂','090-1122-3344',37,'1987-08-12',3,4),(3,'鈴木 実','080-5566-7788',24,'2000-12-24',2,5),(4,'佐藤 清','012-0987-6543',19,'2005-08-01',1,5),(5,'高橋 清','090-9900-1234',24,'2000-12-24',3,5);
+
+alter table user ADD PRIMARY KEY(userID);
+
+create table department(departmentID int NOT NULL PRIMARY KEY,departmentName varchar(255));
+
+insert into department values(1,'開発部'),(2,'営業部'),(3,'総務部');
+
+create table station(stationID int NOT NULL PRIMARY KEY,stationName varchar(255));
+
+insert into station values(1,'九段下'),(2,'永田町'),(3,'渋谷'),(4,'神保町'),(5,'上井草');
+
+alter table department ADD FOREIGN KEY(departmentID) references user(departmentID);
+
+alter table station ADD FOREIGN KEY(stationID) references user(stationID);
